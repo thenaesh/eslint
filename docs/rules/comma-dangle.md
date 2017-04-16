@@ -70,6 +70,8 @@ The default for each option is `"never"` unless otherwise specified.
 * `exports` is for export declarations of ES Modules. (e.g. `export {a,};`)
 * `functions` is for function declarations and function calls. (e.g. `(function(a,){ })(b,);`)<br>
   `functions` is set to `"ignore"` by default for consistency with the string option.
+  Setting `functions` to require trailing commas can cause errors on pre-ECMAScript 2017 code,
+  since trailing commas in function parameter lists are only supported starting ECMAScript 2017.
 
 ### never
 
